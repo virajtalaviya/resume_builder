@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:resume_builder/controllers/home_controller.dart';
 import 'package:resume_builder/main.dart';
 import 'package:resume_builder/screens/cv_view.dart';
+import 'package:resume_builder/sqf_helper.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,7 +20,7 @@ class HomeScreen extends StatelessWidget {
           shouldUseTabletView
               ? TextButton(
                   onPressed: () {
-                    Get.to(const CVView());
+                    // DataBaseManager.getAllData();
                   },
                   child: const Text(
                     "View CV",

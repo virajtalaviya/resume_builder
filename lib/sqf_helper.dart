@@ -1,45 +1,9 @@
+import 'dart:convert';
+import 'dart:developer';
+
+import 'package:resume_builder/model.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
-
-class PasswordClass {
-  String? name;
-  String? address;
-  String? email;
-  String? phone;
-  String? course;
-  String? school_university;
-  String? grade;
-  String? year;
-  String? job_title;
-  String? start_date;
-  String? end_date;
-  String? details;
-  String? skills;
-  String? objective;
-  String? projectTitle;
-  String? description;
-  String? language;
-
-  PasswordClass({
-    this.name,
-    this.address,
-    this.email,
-    this.phone,
-    this.course,
-    this.school_university,
-    this.grade,
-    this.year,
-    this.job_title,
-    this.start_date,
-    this.end_date,
-    this.details,
-    this.skills,
-    this.objective,
-    this.projectTitle,
-    this.description,
-    this.language,
-  });
-}
 
 class DataBaseManager {
   static Database? database;
@@ -67,7 +31,7 @@ class DataBaseManager {
               details TEXT, 
               skills TEXT, 
               objective TEXT, 
-              projectTitle TEXT, 
+              project_title TEXT, 
               description TEXT, 
               languages TEXT
              )''',
@@ -118,7 +82,7 @@ class DataBaseManager {
 
   static Future<void> addProjects(String projectTitle, String description) async {
     await database?.insert("Information", {
-      "projectTitle": projectTitle,
+      "project_title": projectTitle,
       "description": description,
     });
   }
@@ -128,4 +92,17 @@ class DataBaseManager {
       "languages": language,
     });
   }
+
+  static Future<PersonalInfo> getPersonalInfo() async {
+    List<Map<String, Object?>>? personalInfo =
+        await database?.query("Information", columns: ["name", "email", "address", "phone"]);
+
+    return PersonalInfo(
+      name: personalInfo?[0]["name"] as String,
+      email: personalInfo?[0]["email"] as String,
+      address: personalInfo?[0]["address"] as String,
+      phone: personalInfo?[0]["phone"] as String,
+    );
+  }
+  
 }

@@ -68,26 +68,26 @@ class HomeController extends GetxController {
     }
   }
 
-  // void createPDF() {
-  //
-  //
-  //
-  //
-  //
-  //  
-  //   final pdf = pw.Document();
-  //
-  //   pdf.addPage(
-  //     pw.Page(
-  //       pageFormat: PdfPageFormat.a4,
-  //       build: (pw.Context context) {
-  //         return pw.Column(children: [
-  //           Text("")
-  //         ]); // Center
-  //       },
-  //     ),
-  //   ); // Page
-  // }
+  void createPDF() {
+
+
+
+
+
+
+    final pdf = pw.Document();
+
+    pdf.addPage(
+      pw.Page(
+        pageFormat: PdfPageFormat.a4,
+        build: (pw.Context context) {
+          return pw.Column(children: [
+            pw.Text("")
+          ]); // Center
+        },
+      ),
+    ); // Page
+  }
 }
 
 class ListContentClass {

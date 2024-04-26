@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:resume_builder/model.dart';
 
 
-CVModel cvModel = CVModel();
 
 class CVView extends StatelessWidget {
   const CVView({super.key});
