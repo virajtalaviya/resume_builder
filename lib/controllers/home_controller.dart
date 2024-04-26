@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:resume_builder/screens/cover_letter_screen.dart';
 import 'package:resume_builder/screens/education_details_screen.dart';
 import 'package:resume_builder/screens/experience_details_screen.dart';
 import 'package:resume_builder/screens/language_screen.dart';
@@ -8,6 +7,8 @@ import 'package:resume_builder/screens/objective_screen.dart';
 import 'package:resume_builder/screens/personal_details_screen.dart';
 import 'package:resume_builder/screens/projects_screen.dart';
 import 'package:resume_builder/screens/skills_screen.dart';
+import 'package:pdf/pdf.dart';
+import 'package:pdf/widgets.dart' as pw;
 
 class HomeController extends GetxController {
   List<ListContentClass> contentList = [
@@ -30,10 +31,6 @@ class HomeController extends GetxController {
     ListContentClass(
       title: "Objective",
       iconData: Icons.webhook,
-    ),
-    ListContentClass(
-      title: "Cover letter",
-      iconData: Icons.email,
     ),
     ListContentClass(
       title: "Projects",
@@ -63,16 +60,34 @@ class HomeController extends GetxController {
         Get.to(const ObjectiveScreen());
         break;
       case 5:
-        Get.to(const CoverLetterScreen());
-        break;
-      case 6:
         Get.to(const ProjectsDetailsScreen());
         break;
-      case 7:
+      case 6:
         Get.to(const LanguageScreen());
         break;
     }
   }
+
+  // void createPDF() {
+  //
+  //
+  //
+  //
+  //
+  //  
+  //   final pdf = pw.Document();
+  //
+  //   pdf.addPage(
+  //     pw.Page(
+  //       pageFormat: PdfPageFormat.a4,
+  //       build: (pw.Context context) {
+  //         return pw.Column(children: [
+  //           Text("")
+  //         ]); // Center
+  //       },
+  //     ),
+  //   ); // Page
+  // }
 }
 
 class ListContentClass {

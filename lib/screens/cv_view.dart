@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:resume_builder/model.dart';
 
-class CoverLetterScreen extends StatelessWidget {
-  const CoverLetterScreen({super.key});
+
+CVModel cvModel = CVModel();
+
+class CVView extends StatelessWidget {
+  const CVView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +19,10 @@ class CoverLetterScreen extends StatelessWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.white),
         ),
         backgroundColor: Colors.blue,
-        title: const Text("Cover Letter", style: TextStyle(color: Colors.white)),
+        title: const Text("Education Details", style: TextStyle(color: Colors.white)),
         centerTitle: true,
       ),
     );
   }
 }
+

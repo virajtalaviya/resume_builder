@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:resume_builder/controllers/home_controller.dart';
 import 'package:resume_builder/main.dart';
+import 'package:resume_builder/screens/cv_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,6 +15,18 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.blue,
         title: const Text("Create CV", style: TextStyle(color: Colors.white)),
         centerTitle: true,
+        actions: [
+          shouldUseTabletView
+              ? TextButton(
+                  onPressed: () {
+                    Get.to(const CVView());
+                  },
+                  child: const Text(
+                    "View CV",
+                  ),
+                )
+              : const SizedBox(),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
@@ -22,20 +35,22 @@ class HomeScreen extends StatelessWidget {
             shouldUseTabletView
                 ? const SizedBox()
                 : ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(const CVView());
+                    },
                     style: ButtonStyle(
-                      fixedSize: MaterialStateProperty.all(
-                        Size(
-                          MediaQuery.of(context).size.width * 0.98,
-                          60,
+                        fixedSize: MaterialStateProperty.all(
+                          Size(
+                            MediaQuery.of(context).size.width * 0.98,
+                            60,
+                          ),
                         ),
-                      ),
-                      backgroundColor: MaterialStateProperty.all(Colors.blue),
-                      shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)))
-                    ),
+                        backgroundColor: MaterialStateProperty.all(Colors.blue),
+                        shape:
+                            MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)))),
                     child: const Text(
                       "View CV",
-                      style: TextStyle(color: Colors.white,fontSize: 20),
+                      style: TextStyle(color: Colors.white, fontSize: 20),
                     ),
                   ),
             shouldUseTabletView
