@@ -42,7 +42,7 @@ class ExperienceDetailsScreen extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text("Education Details ${index + 1}", style: const TextStyle(fontSize: 16)),
+                                Text("Experience Details ${index + 1}", style: const TextStyle(fontSize: 16)),
                                 IconButton(
                                   onPressed: () {
                                     experienceController.listOfControllers.removeAt(index);

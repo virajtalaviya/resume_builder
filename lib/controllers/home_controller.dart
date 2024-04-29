@@ -45,25 +45,25 @@ class HomeController extends GetxController {
   void tapEventOfCard(int index) {
     switch (index) {
       case 0:
-        Get.to(const PersonalDetailsScreen());
+        Get.to(()=>const PersonalDetailsScreen());
         break;
       case 1:
-        Get.to(const EducationDetailsScreen());
+        Get.to(()=>const EducationDetailsScreen());
         break;
       case 2:
-        Get.to(const ExperienceDetailsScreen());
+        Get.to(()=>const ExperienceDetailsScreen());
         break;
       case 3:
-        Get.to(const SkillsScreen());
+        Get.to(()=>const SkillsScreen());
         break;
       case 4:
-        Get.to(const ObjectiveScreen());
+        Get.to(()=>const ObjectiveScreen());
         break;
       case 5:
-        Get.to(const ProjectsDetailsScreen());
+        Get.to(()=>const ProjectsDetailsScreen());
         break;
       case 6:
-        Get.to(const LanguageScreen());
+        Get.to(()=>const LanguageScreen());
         break;
     }
   }

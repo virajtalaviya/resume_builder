@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
                 ? const SizedBox()
                 : ElevatedButton(
                     onPressed: () {
-                      Get.to(const CVView());
+                      Get.to(()=>const CVView());
                     },
                     style: ButtonStyle(
                         fixedSize: MaterialStateProperty.all(

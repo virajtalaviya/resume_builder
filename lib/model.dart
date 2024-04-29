@@ -4,6 +4,7 @@ class PersonalInfo {
   final String? address;
   final String? phone;
 
+
   PersonalInfo({
     required this.name,
     required this.email,

@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
     }
 
     await Future.delayed(const Duration(seconds: 4));
-    Get.off(const HomeScreen());
+    Get.off(()=>const HomeScreen());
   }
 
   @override

@@ -41,7 +41,7 @@ class ProjectsDetailsScreen extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text("Education Details ${index + 1}", style: const TextStyle(fontSize: 16)),
+                                Text("Projects Details ${index + 1}", style: const TextStyle(fontSize: 16)),
                                 IconButton(
                                   onPressed: () {
                                     projectsDetailsController.listOfControllers.removeAt(index);
