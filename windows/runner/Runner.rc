@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "resume_builder" "\0"
+            VALUE "FileDescription", "create_resume" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "resume_builder" "\0"
+            VALUE "InternalName", "create_resume" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "resume_builder.exe" "\0"
-            VALUE "ProductName", "resume_builder" "\0"
+            VALUE "OriginalFilename", "create_resume.exe" "\0"
+            VALUE "ProductName", "create_resume" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

@@ -1,6 +1,6 @@
-# resume_builder
+# create_resume
 
-"A new Flutter project."
+A new Flutter project.
 
 ## Getting Started
 
