@@ -21,17 +21,20 @@ class CommonTextfield extends StatelessWidget {
         color: Colors.black,
       ),
     );
-    return TextField(
-      controller: textEditingController,
-      maxLines: maxlines,
-      decoration: InputDecoration(
-        hintText: hintText,
-        border: outlineInputBorder,
-        errorBorder: outlineInputBorder,
-        enabledBorder: outlineInputBorder,
-        focusedBorder: outlineInputBorder,
-        disabledBorder: outlineInputBorder,
-        focusedErrorBorder: outlineInputBorder,
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: TextField(
+        controller: textEditingController,
+        maxLines: maxlines,
+        decoration: InputDecoration(
+          hintText: hintText,
+          border: outlineInputBorder,
+          errorBorder: outlineInputBorder,
+          enabledBorder: outlineInputBorder,
+          focusedBorder: outlineInputBorder,
+          disabledBorder: outlineInputBorder,
+          focusedErrorBorder: outlineInputBorder,
+        ),
       ),
     );
   }

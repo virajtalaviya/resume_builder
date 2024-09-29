@@ -1,11 +1,11 @@
 {
-    "name": "resume_builder",
-    "short_name": "resume_builder",
+    "name": "create_resume",
+    "short_name": "create_resume",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": ""A new Flutter project."",
+    "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

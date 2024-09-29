@@ -4,7 +4,7 @@ import 'package:resume_builder/screens/home_screen.dart';
 class SplashController extends GetxController {
   void initAdministration() async {
     await Future.delayed(const Duration(seconds: 3));
-    Get.to(() => const HomeScreen());
+    Get.off(() => const HomeScreen());
   }
 
   @override
